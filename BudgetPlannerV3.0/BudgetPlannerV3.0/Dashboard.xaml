@@ -1,0 +1,122 @@
+﻿<Window x:Class="BudgetPlannerV3._0.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BudgetPlannerV3._0"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="600" Width="800"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+
+            <!--Background-->
+            <Grid Background="Black"></Grid>
+            <!--Background image-->
+            <Grid x:Name="BG">
+                <Grid.Background>
+                    <ImageBrush x:Name="img_bg"
+                            ImageSource="Icons/bluebg_2.jpg"
+                            Stretch="Fill"/>
+                </Grid.Background>
+            </Grid>
+
+            <!--Create new panel-->
+            <Grid x:Name="nav_panel"
+              HorizontalAlignment="Left"
+              Width="100"
+              Background="CornflowerBlue">
+
+            </Grid>
+
+            <StackPanel x:Name="st_pnl">
+                <!--Grid for the menu toggle screen-->
+                <Grid Height="100">
+                    <!--Heading-->
+                    <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Margin="10"
+                           Text="M-E-N-U"
+                           Foreground="Black"
+                           FontSize="20"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           FontWeight="Bold"/>
+
+                </Grid>
+                <!--Listview with images and text-->
+                <ListView x:Name="LV"
+                      Background="Transparent"
+                      BorderBrush="Transparent">
+                    <!--the first menu item-->
+                    <ListViewItem HorizontalAlignment="Left"
+                              Margin="5"
+                              Selected="ListViewItem_Selected_1">
+                        <StackPanel Orientation="Horizontal"
+                                Width="200">
+                            <Image Source="Icons/income.ico"
+                               Stretch="Fill"/>
+                            <TextBlock Text="Planner"
+                                   Margin="2"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+
+                    <!--the second menu item-->
+                    <ListViewItem HorizontalAlignment="Left"
+                              Margin="5"
+                              Selected="ListViewItem_Selected_2">
+                        <StackPanel Orientation="Horizontal"
+                                Width="200">
+                            <Image Source="Icons/about.ico"
+                               Stretch="Fill"/>
+                            <TextBlock Text="About"
+                                   Margin="2"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+
+                    <!--the third menu item-->
+                    <ListViewItem HorizontalAlignment="Left"
+                              Margin="5"
+                              Selected="ListViewItem_Selected">
+                        <StackPanel Orientation="Horizontal"
+                                Width="200">
+                            <Image Source="Icons/exit.ico"
+                               Stretch="Fill"/>
+                            <TextBlock Text="Exit"
+                                   Margin="2"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+
+
+                </ListView>
+            </StackPanel>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
